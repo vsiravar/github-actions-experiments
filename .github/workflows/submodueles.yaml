@@ -16,7 +16,7 @@ jobs:
           git submodule update --remote
           TAG=`cd lima && git describe --tags $(git rev-list --tags --max-count=1)`
           echo "Pulling changes from release: $TAG"
-          cd lima && git checkout $TAG -b update-submodules
+          cd lima && git checkout $TAG
           
       - name: Create PR
         uses: peter-evans/create-pull-request@v4
