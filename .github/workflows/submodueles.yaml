@@ -13,10 +13,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Update sub modules
         run: |
-          git submodule update --remote
           TAG=`cd lima && git describe --tags $(git rev-list --tags --max-count=1)`
           echo "Pulling changes from release: $TAG"
-          cd lima && git checkout $TAG
+          cd lima && git checkout v0.13.0
           
       - name: Create PR
         uses: peter-evans/create-pull-request@v4
