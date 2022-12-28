@@ -4,7 +4,7 @@ name: Publish release to s3
 
 # Controls when the workflow will run
 on:
-  push:
+  create:
     tags:
       - '*'
 jobs:
