@@ -17,5 +17,5 @@ jobs:
           submodules: recursive
           token: ${{ secrets.GITHUB_TOKEN }}
           run: |
-            echo "Hello"
+            echo "Hello action"
             
