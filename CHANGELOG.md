@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/vsiravar/github-actions-experiments/compare/v1.0.1...v1.0.2) (2022-12-28)
+
+
+### Bug Fixes
+
+* Minor release test ([6014364](https://github.com/vsiravar/github-actions-experiments/commit/601436465816881dde216e8db609c2fd2f81bd43))
+
 ## [1.0.1](https://github.com/vsiravar/github-actions-experiments/compare/v1.0.0...v1.0.1) (2022-12-28)
 
 
