@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/vsiravar/github-actions-experiments/compare/v1.0.0...v1.0.1) (2022-12-28)
+
+
+### Bug Fixes
+
+* Modify upload-release ([f1d0ace](https://github.com/vsiravar/github-actions-experiments/commit/f1d0acee4453a9fe99600ddd73124a62e593ee95))
+
 ## 1.0.0 (2022-12-28)
 
 
