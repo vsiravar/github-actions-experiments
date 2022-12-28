@@ -1,0 +1,21 @@
+# Trigger a workflow on tag
+
+name: Publish release to s3
+
+# Controls when the workflow will run
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  upload-please:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+          run: |
+            echo "Hello"
+            
