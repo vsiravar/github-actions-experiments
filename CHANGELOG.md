@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/vsiravar/github-actions-experiments/compare/v1.0.2...v1.0.3) (2022-12-29)
+
+
+### Bug Fixes
+
+* Create PAT ([9b6ec5c](https://github.com/vsiravar/github-actions-experiments/commit/9b6ec5c6db97acda8d94e9e26c381757414706cb))
+
 ## [1.0.2](https://github.com/vsiravar/github-actions-experiments/compare/v1.0.1...v1.0.2) (2022-12-28)
 
 
