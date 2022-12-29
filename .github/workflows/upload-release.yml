@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download last release
-      - uses: robinraju/release-downloader@v1.7
+        uses: robinraju/release-downloader@v1.7
         with:
           repository: "vsiravar/github-actions-experiments"
           latest: true
