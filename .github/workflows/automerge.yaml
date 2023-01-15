@@ -1,0 +1,39 @@
+name: Auto Merge
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check if PR is ready to be merged
+      id: check-status
+      run: |
+        if [[ "${{ github.event.pull_request.state }}" == "open" ]] && [[ "${{ github.event.pull_request.mergeable }}" == "true" ]] && [[ "${{ github.event.pull_request.head.sha }}" == "${{ github.event.pull_request.base.sha }}" ]]; then
+          echo "PR is ready to be merged"
+          echo ::set-output name=mergeable::true
+        else
+          echo "PR is not ready to be merged"
+          echo ::set-output name=mergeable::false
+        fi
+    - name: Merge the PR
+      if: steps.check-status.outputs.mergeable == 'true'
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "Github Actions"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        git fetch origin ${{ github.event.pull_request.head.ref }}
+        git checkout ${{ github.event.pull_request.head.ref }}
+        git merge ${{ github.event.pull_request.base.ref }} --no-edit
+        git push origin ${{ github.event.pull_request.head.ref }}
+    - name: Close the PR
+      if: steps.check-status.outputs.mergeable == 'true'
+      run: |
+        curl -X PATCH \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          -d '{"state":"closed"}' \
+          "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}"
