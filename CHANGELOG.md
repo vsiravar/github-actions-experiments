@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/vsiravar/github-actions-experiments/compare/v1.0.4...v1.0.5) (2023-01-15)
+
+
+### Bug Fixes
+
+* test with GITHUB_TOKEN ([fb02251](https://github.com/vsiravar/github-actions-experiments/commit/fb022510634119ecb2e247502c6ee1c0d2b7775f))
+
 ## [1.0.4](https://github.com/vsiravar/github-actions-experiments/compare/v1.0.3...v1.0.4) (2023-01-15)
 
 
