@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/vsiravar/github-actions-experiments/compare/v1.0.3...v1.0.4) (2023-01-15)
+
+
+### Bug Fixes
+
+* add workflow_dispatch to release please. ([6029a62](https://github.com/vsiravar/github-actions-experiments/commit/6029a62acfce28c5427f5631cb63b2675104fef8))
+
 ## [1.0.3](https://github.com/vsiravar/github-actions-experiments/compare/v1.0.2...v1.0.3) (2022-12-29)
 
 
