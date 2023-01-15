@@ -4,7 +4,8 @@ name: Publish release to s3
 
 # Controls when the workflow will run
 on:
-  workflow_dispatch
+  release:
+    types: [published]
   
 jobs:
   upload-please:
