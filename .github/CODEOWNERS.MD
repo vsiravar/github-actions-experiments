@@ -1,5 +1,1 @@
-# Order is important; the last matching pattern takes the most
-# precedence. When someone opens a pull request that only
-# modifies JS files, only @js-owner and not the global
-# owner(s) will be requested for a review.
-/.github/workflows/srelease-please.yml vsiravara@gmail.com
+/.github/workflows/release-please.yml vsiravara@gmail.com
